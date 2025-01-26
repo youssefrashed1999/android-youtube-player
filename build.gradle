@@ -14,8 +14,8 @@ buildscript {
   }
 }
 
-apply from: "./scripts/publish-root.gradle"
 apply plugin: "maven-publish"
+apply from: "./scripts/publish-root.gradle"
 
 allprojects {
   repositories {
