@@ -78,7 +78,7 @@ class NotificationManager(
 
   fun showNotification() {
     val notificationManager = NotificationManagerCompat.from(context)
-//    notificationManager.notify(notificationId, notificationBuilder.build())
+    notificationManager.cancel(notificationId)
   }
 
   fun dismissNotification() {
@@ -86,6 +86,7 @@ class NotificationManager(
     notificationManager.cancel(notificationId)
   }
 
+  @Suppress("DEPRECATION")
   @SuppressLint("SwitchIntDef", "RestrictedApi")
   override fun onStateChange(youTubePlayer: YouTubePlayer, state: PlayerConstants.PlayerState) {
     when (state) {
