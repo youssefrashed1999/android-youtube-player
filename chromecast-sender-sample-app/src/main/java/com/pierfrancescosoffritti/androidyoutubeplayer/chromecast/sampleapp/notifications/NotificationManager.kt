@@ -78,7 +78,7 @@ class NotificationManager(
 
   fun showNotification() {
     val notificationManager = NotificationManagerCompat.from(context)
-    notificationManager.notify(notificationId, notificationBuilder.build())
+//    notificationManager.notify(notificationId, notificationBuilder.build())
   }
 
   fun dismissNotification() {
@@ -86,7 +86,7 @@ class NotificationManager(
     notificationManager.cancel(notificationId)
   }
 
-  @SuppressLint("SwitchIntDef")
+  @SuppressLint("SwitchIntDef", "RestrictedApi")
   override fun onStateChange(youTubePlayer: YouTubePlayer, state: PlayerConstants.PlayerState) {
     when (state) {
       PlayerConstants.PlayerState.PLAYING -> notificationBuilder.mActions[0].icon =
