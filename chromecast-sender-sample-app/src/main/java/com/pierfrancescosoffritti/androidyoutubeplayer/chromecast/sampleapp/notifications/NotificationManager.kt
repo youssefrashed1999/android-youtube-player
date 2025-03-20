@@ -81,10 +81,7 @@ class NotificationManager(
     notificationManager.cancel(notificationId)
   }
 
-  fun dismissNotification() {
-    val notificationManager = NotificationManagerCompat.from(context)
-    notificationManager.cancel(notificationId)
-  }
+  fun dismissNotification() = NotificationManagerCompat.from(context).cancel(notificationId)
 
   @Suppress("DEPRECATION")
   @SuppressLint("SwitchIntDef", "RestrictedApi")
