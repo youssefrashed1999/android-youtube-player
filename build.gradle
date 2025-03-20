@@ -21,6 +21,7 @@ sonar {
     property "sonar.organization", "youssefrashed1999"
     property "sonar.host.url", "https://sonarcloud.io"
     property "sonar.exclusions", "**/*.xml"
+    property "sonar.java.binaries", "${project.buildDir}/intermediates/javac/debug/classes"
   }
 }
 apply plugin: 'maven-publish'
