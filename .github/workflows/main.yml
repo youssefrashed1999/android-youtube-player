@@ -13,6 +13,8 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+      - name: Build the project
+        run: ./gradlew assembleDebug
       - name: SonarQubeScan
         uses: SonarSource/sonarqube-scan-action@v4
         env:
