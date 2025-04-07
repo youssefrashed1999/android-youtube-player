@@ -64,6 +64,10 @@ private class YouTubePlayerImpl(private val webView: WebView) : YouTubePlayer {
 
   override fun hideWatchOnYoutubeButton() = webView.invoke("hideWatchOnYoutubeButton")
 
+  override fun hideVideoDetails() = webView.invoke("hideVideoDetails")
+
+  override fun hideActionMenu() = webView.invoke("hideActionMenu")
+
   fun release() {
     listeners.clear()
     mainThread.removeCallbacksAndMessages(null)

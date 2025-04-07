@@ -12,6 +12,8 @@ abstract class AbstractYouTubePlayerListener : YouTubePlayerListener {
     youTubePlayer.hideTabletPopup()
     youTubePlayer.hideVideoSuggestionsPopup()
     youTubePlayer.hideWatchOnYoutubeButton()
+    youTubePlayer.hideActionMenu()
+    youTubePlayer.hideVideoDetails()
   }
   override fun onStateChange(youTubePlayer: YouTubePlayer, state: PlayerConstants.PlayerState) {}
   override fun onPlaybackQualityChange(youTubePlayer: YouTubePlayer, playbackQuality: PlayerConstants.PlaybackQuality) {}

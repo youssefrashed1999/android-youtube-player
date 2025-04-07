@@ -27,7 +27,6 @@ public class DefaultCustomUiExampleActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_default_custom_ui_example);
     youTubePlayerView = findViewById(R.id.youtube_player_view);
-    closeFadeController = new FadeViewHelper(findViewById(R.id.close_icon));
     initYouTubePlayerView();
   }
 
