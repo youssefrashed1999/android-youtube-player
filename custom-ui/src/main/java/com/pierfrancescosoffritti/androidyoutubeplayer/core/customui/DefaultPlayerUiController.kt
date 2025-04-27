@@ -10,6 +10,7 @@ import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.core.content.ContextCompat
+import androidx.core.view.isVisible
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.PlayerConstants
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
@@ -69,6 +70,7 @@ class DefaultPlayerUiController(
   private var isCustomActionRightEnabled = false
 
   private var isMatchParent = false
+  private var oldState = PlayerConstants.PlayerState.UNSTARTED
 
   private val youTubePlayerStateListener = object : AbstractYouTubePlayerListener() {
     override fun onStateChange(youTubePlayer: YouTubePlayer, state: PlayerConstants.PlayerState) {
@@ -95,8 +97,7 @@ class DefaultPlayerUiController(
               android.R.color.transparent
             )
           )
-          playPauseButton.visibility = View.GONE
-
+          playPauseButton.isVisible = oldState == PlayerConstants.PlayerState.PAUSED
           customActionLeft.visibility = View.GONE
           customActionRight.visibility = View.GONE
         }
@@ -106,6 +107,7 @@ class DefaultPlayerUiController(
           playPauseButton.visibility = View.GONE
         }
       }
+      oldState = state
     }
 
     override fun onVideoId(youTubePlayer: YouTubePlayer, videoId: String) {
