@@ -87,7 +87,7 @@ class DefaultPlayerUiController(
         updatePlayPauseButtonIcon(state === PlayerConstants.PlayerState.PLAYING)
 
       } else {
-        updatePlayPauseButtonIcon(false)
+        updatePlayPauseButtonIcon(oldState === PlayerConstants.PlayerState.PLAYING)
 
         if (state === PlayerConstants.PlayerState.BUFFERING) {
           progressBar.visibility = View.VISIBLE
@@ -97,7 +97,7 @@ class DefaultPlayerUiController(
               android.R.color.transparent
             )
           )
-          playPauseButton.isVisible = oldState == PlayerConstants.PlayerState.PAUSED
+          playPauseButton.isVisible = oldState in listOf(PlayerConstants.PlayerState.PAUSED, PlayerConstants.PlayerState.PLAYING)
           customActionLeft.visibility = View.GONE
           customActionRight.visibility = View.GONE
         }
