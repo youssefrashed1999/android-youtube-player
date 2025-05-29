@@ -24,10 +24,13 @@ class YouTubePlayerBridge(private val youTubePlayerOwner: YouTubePlayerBridgeCal
     private const val STATE_CUED = "CUED"
 
     private const val QUALITY_SMALL = "small"
+    private const val QUALITY_TINY = "tiny"
     private const val QUALITY_MEDIUM = "medium"
     private const val QUALITY_LARGE = "large"
     private const val QUALITY_HD720 = "hd720"
     private const val QUALITY_HD1080 = "hd1080"
+    private const val QUALITY_HD1140 = "hd1440"
+    private const val QUALITY_HD2160 = "hd2160"
     private const val QUALITY_HIGH_RES = "highres"
     private const val QUALITY_DEFAULT = "default"
 
@@ -178,14 +181,14 @@ class YouTubePlayerBridge(private val youTubePlayerOwner: YouTubePlayerBridgeCal
   private fun parsePlaybackQuality(quality: String): PlayerConstants.PlaybackQuality {
     return when {
       quality.equals(QUALITY_SMALL, ignoreCase = true) -> PlayerConstants.PlaybackQuality.SMALL
+      quality.equals(QUALITY_TINY, ignoreCase = true) -> PlayerConstants.PlaybackQuality.TINY
       quality.equals(QUALITY_MEDIUM, ignoreCase = true) -> PlayerConstants.PlaybackQuality.MEDIUM
       quality.equals(QUALITY_LARGE, ignoreCase = true) -> PlayerConstants.PlaybackQuality.LARGE
       quality.equals(QUALITY_HD720, ignoreCase = true) -> PlayerConstants.PlaybackQuality.HD720
       quality.equals(QUALITY_HD1080, ignoreCase = true) -> PlayerConstants.PlaybackQuality.HD1080
-      quality.equals(
-        QUALITY_HIGH_RES,
-        ignoreCase = true
-      ) -> PlayerConstants.PlaybackQuality.HIGH_RES
+      quality.equals(QUALITY_HD1140, ignoreCase = true) -> PlayerConstants.PlaybackQuality.HD1440
+      quality.equals(QUALITY_HD2160, ignoreCase = true) -> PlayerConstants.PlaybackQuality.HD2160
+      quality.equals(QUALITY_HIGH_RES, ignoreCase = true) -> PlayerConstants.PlaybackQuality.HIGH_RES
       quality.equals(QUALITY_DEFAULT, ignoreCase = true) -> PlayerConstants.PlaybackQuality.DEFAULT
       else -> PlayerConstants.PlaybackQuality.UNKNOWN
     }

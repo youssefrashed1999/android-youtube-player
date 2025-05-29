@@ -7,7 +7,7 @@ class PlayerConstants {
   }
 
   enum class PlaybackQuality {
-    UNKNOWN, SMALL, MEDIUM, LARGE, HD720, HD1080, HIGH_RES, DEFAULT
+    UNKNOWN, SMALL, TINY, MEDIUM, LARGE, HD720, HD1080, HD1440, HD2160, HIGH_RES, DEFAULT
   }
 
   enum class PlayerError {
