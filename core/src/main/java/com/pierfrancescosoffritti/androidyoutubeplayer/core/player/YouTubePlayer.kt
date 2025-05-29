@@ -77,4 +77,6 @@ interface YouTubePlayer {
   fun hideVideoDetails()
 
   fun hideActionMenu()
+
+  fun clearCache()
 }

@@ -68,6 +68,10 @@ private class YouTubePlayerImpl(private val webView: WebView) : YouTubePlayer {
 
   override fun hideActionMenu() = webView.invoke("hideActionMenu")
 
+  override fun clearCache() {
+    webView.clearCache(true)
+  }
+
   fun release() {
     listeners.clear()
     mainThread.removeCallbacksAndMessages(null)
