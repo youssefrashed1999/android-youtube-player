@@ -97,7 +97,7 @@ class DefaultPlayerUiController(
               android.R.color.transparent
             )
           )
-          playPauseButton.isVisible = oldState in listOf(PlayerConstants.PlayerState.PAUSED, PlayerConstants.PlayerState.PLAYING)
+          playPauseButton.isVisible = false
           customActionLeft.visibility = View.GONE
           customActionRight.visibility = View.GONE
         }
