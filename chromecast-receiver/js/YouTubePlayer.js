@@ -36,7 +36,7 @@ function YouTubePlayer(communicationConstants, communicationChannel) {
                 controls: 0,
                 enablejsapi: 1,
                 fs: 0,
-                origin: 'https://www.youtube.com',
+                origin: 'https://com.oneacademy.course',
                 rel: 0,
                 iv_load_policy: 3
             }            
