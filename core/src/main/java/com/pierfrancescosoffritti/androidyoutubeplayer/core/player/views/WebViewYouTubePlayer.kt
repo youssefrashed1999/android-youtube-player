@@ -147,7 +147,7 @@ internal class WebViewYouTubePlayer constructor(
       .replace("<<injectedVideoId>>", if (videoId != null) { "'$videoId'" } else { "undefined" })
       .replace("<<injectedPlayerVars>>", playerOptions.toString())
 
-    loadDataWithBaseURL(playerOptions.getOrigin(), htmlPage, "text/html", "utf-8", null)
+    loadDataWithBaseURL("https://oneacademyapp.com", htmlPage, "text/html", "utf-8", null)
 
     webChromeClient = object : WebChromeClient() {
 
