@@ -103,7 +103,7 @@ class DefaultPlayerUiController(
         }
 
         if (state === PlayerConstants.PlayerState.UNSTARTED) {
-          progressBar.visibility = View.GONE
+          progressBar.visibility = View.VISIBLE
           playPauseButton.visibility = View.GONE
         }
       }
