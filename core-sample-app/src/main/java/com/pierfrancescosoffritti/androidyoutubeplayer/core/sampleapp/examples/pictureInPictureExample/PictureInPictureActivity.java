@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.Button;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -25,7 +26,6 @@ public class PictureInPictureActivity extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_picture_in_picture_example);
-
     initYouTubePlayerView();
   }
 
@@ -62,6 +62,7 @@ public class PictureInPictureActivity extends AppCompatActivity {
     });
   }
 
+  @RequiresApi(api = Build.VERSION_CODES.O)
   @Override
   public void onPictureInPictureModeChanged(boolean isInPictureInPictureMode, Configuration newConfig) {
     super.onPictureInPictureModeChanged(isInPictureInPictureMode, newConfig);

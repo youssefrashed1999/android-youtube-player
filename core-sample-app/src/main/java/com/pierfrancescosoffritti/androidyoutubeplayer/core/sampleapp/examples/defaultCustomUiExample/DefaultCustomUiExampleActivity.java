@@ -48,7 +48,7 @@ public class DefaultCustomUiExampleActivity extends AppCompatActivity {
         YouTubePlayerUtils.loadOrCueVideo(
                 youTubePlayer,
                 getLifecycle(),
-                "7CZcnJuYgC0",
+                "AKeUssuu3Is",
                 0f
         );
       }
